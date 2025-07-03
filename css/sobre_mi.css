@@ -7,17 +7,17 @@
   flex-wrap: wrap;
 }
 .foto img {
-  max-width: 160px;
+  max-width: 220px;
   width: 100%;
   border-radius: 50%;
 }
 .info-personal {
   max-width: 600px;
   h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
   }
   p {
-    font-size: 20px;
+    font-size: 1.125rem;
   }
 }
 .resaltado {
@@ -28,7 +28,14 @@
   #sobre-mi {
     flex-direction: column;
     text-align: center;
+    h1 {
+      font-size: 2rem;
+    }
+    img {
+      width: 150px;
+    }
     p {
+      font-size: 1rem;
       padding: 0 15px 0 15px;
     }
   }
