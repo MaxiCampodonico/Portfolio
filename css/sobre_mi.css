@@ -1,0 +1,35 @@
+#sobre-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+}
+.foto img {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 50%;
+}
+.info-personal {
+  max-width: 600px;
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+.resaltado {
+  color: #00bfff;
+}
+/* Contenedor responsivo */
+@media (max-width: 768px) {
+  #sobre-mi {
+    flex-direction: column;
+    text-align: center;
+    p {
+      padding: 0 15px 0 15px;
+    }
+  }
+}

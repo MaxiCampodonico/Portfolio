@@ -1,0 +1,49 @@
+*{}
+box-sizing: border-box = cambia la forma en que se calculan los tamaños de los elementos. Sin border-box (valor por defecto: content-box):
+El padding y el border se suman al ancho.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+line-height: 1.6 = controla el espaciado vertical entre líneas de texto. Mejora la legibilidad del texto. Da más aire entre líneas, evitando que se vean 
+amontonadas. Valor recomendado: 1.5 a 1.6 suele ser ideal para párrafos largos en la web. Font-size recomendado 16px.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+display: flex = convierte un contenedor en un contenedor flexible (flex container), lo que permite alinear y distribuir sus elementos hijos (flex items) 
+de forma eficiente y dinámica. Atributos comunes que acompañan a flex:
+flex-direction: cambia la dirección (row, column)
+justify-content: alinea en el eje principal (horizontal por defecto)
+align-items: alinea en el eje secundario (vertical por defecto)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+position: sticky = fija un elemento en la pantalla cuando se alcanza cierta posición al hacer scroll, pero solo dentro de su contenedor padre. ¿Cómo funciona?
+El elemento se comporta como relative al principio. Cuando se hace scroll y llega al valor definido con top, left, right o bottom, se vuelve fijo como fixed, pero 
+solo mientras esté dentro de su contenedor. ¿Cuándo usarlo?
+Barras de navegación
+Títulos de secciones que se quedan visibles mientras se lee el contenido
+Cabeceras de tablas largas
+Importante:
+position: sticky; necesita espacio suficiente en el contenedor y no funciona si el padre tiene overflow: hidden o overflow: auto.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+top: 0 = se usa para posicionar verticalmente un elemento, pero solo funciona si el elemento tiene una posición distinta de 
+static (como absolute, relative, fixed o sticky).
+Resumen:
+top: 0; mueve un elemento hasta el tope superior del contenedor o de la pantalla, según el tipo de posicionamiento.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+z-index = controla la profundidad (orden de apilamiento) de los elementos en la pantalla, es decir, cuál aparece encima de cuál. Importante:
+z-index solo funciona en elementos que tienen una posición distinta de static (como relative, absolute, fixed o sticky). Tip:
+No necesitas números muy grandes (como 99999) a menos que compitas con otros elementos con z-index alto. Un z-index: 1000 ya es bastante prioritario 
+en la mayoría de los casos.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. <div class="menu-toggle">
+class="menu-toggle": Es la clase que usaremos en CSS para darle estilo al botón (tamaño, color, posición) y en JavaScript para detectar cuando el 
+usuario hace click y mostrar/ocultar el menú.
+2. aria-label="Abrir menú"
+Este atributo es para accesibilidad (a11y).
+Indica a lectores de pantalla qué hace este elemento: "Abrir menú".
+Muy importante para usuarios con discapacidad visual.
+3. role="button"
+Aunque el elemento es un <div>, con este atributo le decimos a la tecnología asistiva que se comporte como un botón.
+Esto mejora la semántica y usabilidad, ya que un <div> por defecto no es un botón.
+4. tabindex="0"
+Hace que el <div> sea navegable con teclado (pulsando TAB).
+Fundamental para accesibilidad y para que usuarios puedan abrir el menú con teclado.
+5. <i class='bx bx-menu'></i>
+Este es el ícono de Boxicons que representa el símbolo de “menú hamburguesa” (tres rayitas horizontales).
+Visualmente indica que ese botón abre el menú de navegación.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------

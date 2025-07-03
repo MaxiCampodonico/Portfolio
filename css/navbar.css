@@ -1,0 +1,102 @@
+/* Contenedor principal de la navbar */
+.navbar {
+  background: rgba(18, 18, 26, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed; /* Fija la navbar en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Por encima de otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 10px 10px;
+}
+.logo {
+  width: 350px;
+}
+/* Lista de enlaces del menú (nav) */
+.nav-links {
+  list-style: none;
+  display: flex; /* Por defecto se muestra en fila */
+  gap: 2rem; /* Espacio entre enlaces */
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Color al pasar el mouse */
+.nav-links a:hover {
+  color: #6b9eef;
+}
+
+/* =========================
+   ESTILOS PARA EL MENÚ HAMBURGUESA (mobile-first)
+   ========================= */
+
+/* Botón menú hamburguesa visible en móvil */
+.menu-toggle {
+  display: block; /* Visible en móvil */
+  font-size: 1.8rem; /* Tamaño legible */
+  color: #eaeaea;
+  cursor: pointer; /* Manito al pasar el mouse */
+  user-select: none; /* No permite seleccionar el ícono */
+}
+
+/* Menú oculto por defecto en móvil */
+.nav-links {
+  display: none; /* Oculto en móvil para el toggle */
+  flex-direction: column; /* Cuando se muestra, en columna */
+  position: absolute; /* Posicionado sobre otros elementos */
+  top: 100%; /* Justo debajo de la navbar */
+  right: 0;
+  background: rgba(18, 18, 26, 0.7);
+  width: 200px;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mostrar menú cuando se activa la clase .show */
+.nav-links.show {
+  display: flex;
+}
+
+/* =========================
+   MEDIA QUERY PARA DESKTOP Y TABLET
+   ========================= */
+@media (min-width: 768px) {
+  /* Ocultar el botón hamburguesa en pantallas grandes */
+  .menu-toggle {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+
+  /* Mostrar siempre el menú en horizontal */
+  .nav-links {
+    display: flex !important; /* Forzar que se muestre */
+    position: static; /* Normal en el flujo del documento */
+    flex-direction: row; /* En fila */
+    background: none;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Separar enlaces horizontalmente */
+  .nav-links a {
+    padding: 0 1rem;
+  }
+}

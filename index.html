@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/sobre_mi.css" />
+    <link rel="stylesheet" href="css/proyectos.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>
+      Maximiliano Campodónico – Portfolio personal y desarrollador web
+    </title>
+  </head>
+  <body>
+    <div class="fondo-radial"></div>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div
+          class="menu-toggle"
+          aria-label="Abrir menú"
+          role="button"
+          tabindex="0"
+        >
+          <i class="bx bx-menu"></i>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#sobre-mi">< Sobre Mi /></a>
+          </li>
+          <li><a href="#proyectos">< Proyectos /></a></li>
+          <li><a href="#">< Habilidades /></a></li>
+          <li><a href="#">< Contacto /></a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="sobre-mi">
+      <figure class="foto">
+        <img
+          src="img/Foto de Portfolio.png"
+          alt="Retrato de Maximiliano Campodónico"
+        />
+      </figure>
+      <article class="info-personal">
+        <h1>Hola! Soy Maxi</h1>
+        <p>
+          Aprendo de forma <span class="resaltado">autodidacta</span> el
+          desarrollo web y móvil, enfocándome en
+          <span class="resaltado">HTML</span>,
+          <span class="resaltado">CSS</span> y
+          <span class="resaltado">JavaScript</span>. Me gusta construir desde
+          cero, experimentar y entender cómo funciona cada parte del código.
+        </p>
+      </article>
+    </section>
+    <section id="proyectos">
+      <div class="contenedor-proyectos">
+        <div class="proyecto">
+          <h3>Snake Game</h3>
+          <figure>
+            <img
+              src="https://placehold.co/600x400/000000/FFF"
+              alt="captura de pantalla de snake game"
+              class="img-proyecto"
+            />
+          </figure>
+
+          <div class="lenguajes">
+            <img src="assets/iconos/html-5.png" alt="" />
+            <img src="assets/iconos/css-3.png" alt="" />
+            <img src="assets/iconos/js.png" alt="" />
+            <img src="assets/iconos/github.png" alt="" />
+          </div>
+        </div>
+        <div class="proyecto">
+          <h3>Snake Game</h3>
+          <figure>
+            <img
+              src="https://placehold.co/600x400/000000/FFFFFF/png"
+              alt="captura de pantalla de snake game"
+              class="img-proyecto"
+            />
+          </figure>
+          <div class="lenguajes">
+            <img src="assets/iconos/html-5.png" alt="" />
+            <img src="assets/iconos/css-3.png" alt="" />
+            <img src="assets/iconos/js.png" alt="" />
+            <a href="#"> <img src="assets/iconos/github.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
