@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio personal de Maximiliano Campodónico. Desarrollador web con conocimientos en HTML, CSS y JavaScript."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:;"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
@@ -27,7 +35,9 @@
           role="button"
           tabindex="0"
         >
-          <i class="bx bx-menu"></i>
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <i class="bx bx-menu"></i>
+          </button>
         </div>
         <ul class="nav-links">
           <li>
@@ -42,7 +52,7 @@
     <section id="sobre-mi">
       <figure class="foto">
         <img
-          src="img/Foto de Portfolio.png"
+          src="img/foto-de-portfolio.webp"
           alt="Retrato de Maximiliano Campodónico"
         />
       </figure>
@@ -63,20 +73,38 @@
       <div class="proyecto">
         <div class="proyecto-img">
           <img
-            src="https://placehold.co/600x400"
+            src="img/snake-game.png"
             alt="Captura de pantalla del proyecto"
           />
         </div>
         <div class="proyecto-info">
           <h3>Snake Game</h3>
-          <p>Descripción breve del proyecto y sus funcionalidades.</p>
+          <p>
+            Proyecto realizado como parte de mi aprendizaje en desarrollo web.
+            Usé JavaScript para manejar la lógica del juego y reforcé conceptos
+            clave de HTML y CSS, como el manejo del DOM, eventos de teclado, y
+            diseño responsivo. Además, practiqué buenas prácticas en la
+            organización del código y separación de estilos.
+          </p>
           <div class="tecnologias">
             <img src="assets/iconos/html-5.png" alt="HTML" />
             <img src="assets/iconos/css-3.png" alt="CSS" />
             <img src="assets/iconos/js.png" alt="JavaScript" />
-            <a href="#"><img src="assets/iconos/github.png" alt="GitHub" /></a>
+            <a
+              href="https://github.com/MaxiCampodonico/Snake_Game.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="assets/iconos/github.png" alt="GitHub"
+            /></a>
           </div>
-          <button>Jugar</button>
+          <button>
+            <a
+              href="https://maxicampodonico.github.io/Snake_Game/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Jugar</a
+            >
+          </button>
         </div>
       </div>
     </section>

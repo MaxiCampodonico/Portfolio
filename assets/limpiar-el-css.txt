@@ -1,0 +1,3 @@
+Desde la terminal ejecutar:
+
+npx purgecss --config purgecss.config.cjs
