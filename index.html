@@ -7,10 +7,7 @@
       name="description"
       content="Portfolio personal de Maximiliano Campodónico. Desarrollador web con conocimientos en HTML, CSS y JavaScript."
     />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data:;"
-    />
+    <!-- CSP removido para evitar problemas con recursos externos -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
@@ -29,16 +26,14 @@
     <header>
       <nav class="navbar">
         <div class="logo"></div>
-        <div
-          class="menu-toggle"
-          aria-label="Abrir menú"
-          role="button"
-          tabindex="0"
-        >
-          <button class="menu-toggle" aria-label="Abrir menú">
-            <i class="bx bx-menu"></i>
-          </button>
-        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <!-- Icono hamburguesa con HTML puro -->
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
         <ul class="nav-links">
           <li>
             <a href="#">Sobre Mi</a>
